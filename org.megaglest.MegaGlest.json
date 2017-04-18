@@ -1,0 +1,157 @@
+{
+    "app-id": "org.megaglest.MegaGlest",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "1.6",
+    "sdk": "org.freedesktop.Sdk",
+    "rename-appdata-file": "megaglest.appdata.xml",
+    "rename-desktop-file": "megaglest.desktop",
+    "rename-icon": "megaglest",
+    "command": "megaglest",
+    "finish-args": [
+        "--device=dri",
+        "--persist=.megaglest",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=pulseaudio"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/aclocal",
+        "/share/man",
+        "*.la", "*.a"
+    ],
+    "modules": [
+        {
+            "name": "glew",
+            "no-autogen": true,
+            "make-args": [
+                "GLEW_DEST=/app",
+                "GLEW_PREFIX=/app",
+                "LIBDIR=/app/lib"
+            ],
+            "make-install-args": [
+                "GLEW_DEST=/app",
+                "GLEW_PREFIX=/app",
+                "LIBDIR=/app/lib"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/glew/glew/2.0.0/glew-2.0.0.tgz",
+                    "sha256": "c572c30a4e64689c342ba1624130ac98936d7af90c3103f9ce12b8a0c5736764"
+                }
+            ]
+        },
+        {
+            "name": "glu",
+            "config-opts": ["--disable-static"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://mesa.freedesktop.org/archive/glu/glu-9.0.0.tar.bz2",
+                    "sha256": "1f7ad0d379a722fcbd303aa5650c6d7d5544fde83196b42a73d1193568a4df12"
+                }
+            ]
+        },
+        {
+            "name": "ftgl",
+            "config-opts": ["--disable-static"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/ftgl/FTGL%20Source/2.1.3~rc5/ftgl-2.1.3-rc5.tar.gz",
+                    "sha256": "5458d62122454869572d39f8aa85745fc05d5518001bcefa63bd6cbb8d26565b"
+                }
+            ]
+        },
+        {
+            "name": "openal",
+            "buildsystem": "cmake",
+            "cleanup": [
+                "/bin"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://kcat.strangesoft.net/openal-releases/openal-soft-1.17.2.tar.bz2",
+                    "sha256": "a341f8542f1f0b8c65241a17da13d073f18ec06658e1a1606a8ecc8bbc2b3314"
+                }
+            ]
+        },
+        "org.lua.modules.json",
+        {
+            "name": "libircclient",
+            "config-opts": ["--disable-static"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://downloads.sourceforge.net/project/libircclient/libircclient/1.9/libircclient-1.9.tar.gz",
+                    "sha256": "81c397eee618667bccfe8960352ba5f829c8c2e9badc270594b91128cd89c064"
+                },
+                {
+                    "type": "patch",
+                    "path": "libircclient-proper-lib-building.patch"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "autogen.sh",
+                    "commands": [
+                        "autoreconf -vfi"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "miniupnpc",
+            "buildsystem": "cmake",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://miniupnp.free.fr/files/miniupnpc-1.9.20140610.tar.gz",
+                    "sha256": "31beffe44a5d7b7bbad3729cdd6f9f85844b9e5771aebb56550f87cbedcf5d3b"
+                }
+            ]
+        },
+        {
+            "name": "megaglest",
+            "buildsystem": "cmake",
+            "config-opts": [
+                "-DBUILD_MEGAGLEST_MAP_EDITOR=OFF",
+                "-DBUILD_MEGAGLEST_MODEL_VIEWER=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/MegaGlest/megaglest-source/releases/download/3.12.0/megaglest-source-3.12.0.tar.xz",
+                    "sha256": "7d0640421fa96a8f61e51e558d7536dec1052df4afb49797ab7353f89077cf97"
+                },
+                {
+                    "type": "patch",
+                    "path": "megaglest-gcc6-ftbfs.patch"
+                }
+            ]
+        },
+        {
+            "name": "megaglest-data",
+            "buildsystem": "cmake",
+            "config-opts": [
+                "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons/hicolor/48x48/apps"
+            ],
+            "cleanup": [
+                "/share/appdata/megaglest_editor.appdata.xml",
+                "/share/applications/megaglest_editor.desktop",
+                "/share/applications/megaglest_g3dviewer.desktop",
+                "/share/menu"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/MegaGlest/megaglest-data/releases/download/3.12.0/megaglest-data-3.12.0.b1.tar.xz",
+                    "sha256": "4021aa6c05d05502120f90ff22ac4e693f78a6a0fd56efdc44183029abbbf2fd"
+                }
+            ]
+        }
+    ]
+}
