@@ -23,7 +23,8 @@
         "*.la", "*.a"
     ],
     "modules": [
-        "shared-modules/lua-5.3.2.json",
+        "shared-modules/lua5.3/lua-5.3.2.json",
+        "shared-modules/glu/glu-9.0.0.json",
         {
             "name": "glew",
             "no-autogen": true,
@@ -42,17 +43,6 @@
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/glew/glew/2.0.0/glew-2.0.0.tgz",
                     "sha256": "c572c30a4e64689c342ba1624130ac98936d7af90c3103f9ce12b8a0c5736764"
-                }
-            ]
-        },
-        {
-            "name": "glu",
-            "config-opts": ["--disable-static"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://mesa.freedesktop.org/archive/glu/glu-9.0.0.tar.bz2",
-                    "sha256": "1f7ad0d379a722fcbd303aa5650c6d7d5544fde83196b42a73d1193568a4df12"
                 }
             ]
         },
