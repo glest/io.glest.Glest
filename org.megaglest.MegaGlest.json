@@ -85,12 +85,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/MegaGlest/megaglest-source/releases/download/3.12.0/megaglest-source-3.12.0.tar.xz",
-                    "sha256": "7d0640421fa96a8f61e51e558d7536dec1052df4afb49797ab7353f89077cf97"
-                },
-                {
-                    "type": "patch",
-                    "path": "megaglest-gcc6-ftbfs.patch"
+                    "url": "https://github.com/MegaGlest/megaglest-source/releases/download/3.13.0/megaglest-source-3.13.0.tar.xz",
+                    "sha256": "09fef67bc6878b1afbb0b403fec9fcf7dc270d500fdc62ed98e5f210e398ccb9"
                 }
             ]
         },
@@ -109,8 +105,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/MegaGlest/megaglest-data/releases/download/3.12.0/megaglest-data-3.12.0.b1.tar.xz",
-                    "sha256": "4021aa6c05d05502120f90ff22ac4e693f78a6a0fd56efdc44183029abbbf2fd"
+                    "url": "https://github.com/MegaGlest/megaglest-data/releases/download/3.13.0/megaglest-data-3.13.0.tar.xz",
+                    "sha256": "43de3ca668f0419e84ec6b37fa41dd6eb88052752a8a11f5e02ea13f86faef46"
                 }
             ]
         }
