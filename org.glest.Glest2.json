@@ -1,15 +1,15 @@
 {
-    "app-id": "org.megaglest.MegaGlest",
+    "app-id": "org.glest.MegaGlest",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "1.6",
     "sdk": "org.freedesktop.Sdk",
-    "rename-appdata-file": "megaglest.appdata.xml",
-    "rename-desktop-file": "megaglest.desktop",
-    "rename-icon": "megaglest",
-    "command": "megaglest",
+    "rename-appdata-file": "glest.appdata.xml",
+    "rename-desktop-file": "glest.desktop",
+    "rename-icon": "glest",
+    "command": "glest",
     "finish-args": [
         "--device=dri",
-        "--persist=.megaglest",
+        "--persist=.glest",
         "--share=ipc",
         "--share=network",
         "--socket=x11",
@@ -76,7 +76,7 @@
             ]
         },
         {
-            "name": "megaglest",
+            "name": "glest",
             "buildsystem": "cmake",
             "config-opts": [
                 "-DBUILD_MEGAGLEST_MAP_EDITOR=OFF",
@@ -85,28 +85,28 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/MegaGlest/megaglest-source/releases/download/3.13.0/megaglest-source-3.13.0.tar.xz",
-                    "sha256": "09fef67bc6878b1afbb0b403fec9fcf7dc270d500fdc62ed98e5f210e398ccb9"
+                    "url": "https://github.com/glest/glest-source/archive/2.0.zip",
+                    "sha256": "3e7207836cf72e46a46d5cb5f183fb9746bf6d2f8b8bd0b394a19e94f5c89a4f"
                 }
             ]
         },
         {
-            "name": "megaglest-data",
+            "name": "glest-data",
             "buildsystem": "cmake",
             "config-opts": [
                 "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons/hicolor/48x48/apps"
             ],
             "cleanup": [
-                "/share/appdata/megaglest_editor.appdata.xml",
-                "/share/applications/megaglest_editor.desktop",
-                "/share/applications/megaglest_g3dviewer.desktop",
+                "/share/appdata/glest_editor.appdata.xml",
+                "/share/applications/glest_editor.desktop",
+                "/share/applications/glest_g3dviewer.desktop",
                 "/share/menu"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/MegaGlest/megaglest-data/releases/download/3.13.0/megaglest-data-3.13.0.tar.xz",
-                    "sha256": "43de3ca668f0419e84ec6b37fa41dd6eb88052752a8a11f5e02ea13f86faef46"
+                    "url": "https://github.com/glest/glest-data/archive/master.zip",
+                    "sha256": "958d2e388808c967901003cb741bbda4756933662adf89480cb75c141d0d7b87"
                 }
             ]
         }
