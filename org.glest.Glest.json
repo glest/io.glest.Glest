@@ -1,7 +1,7 @@
 {
-    "app-id": "org.glest.MegaGlest",
+    "app-id": "io.glest.Glest",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "glest.appdata.xml",
     "rename-desktop-file": "glest.desktop",
@@ -79,14 +79,16 @@
             "name": "glest",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DBUILD_MEGAGLEST_MAP_EDITOR=OFF",
-                "-DBUILD_MEGAGLEST_MODEL_VIEWER=OFF"
+                "-DBUILD_MAP_EDITOR=OFF",
+                "-DBUILD_MODEL_VIEWER=OFF",
+                "-DINSTALL_DIR_BIN=/app/bin/",
+                "-DCMAKE_INSTALL_PREFIX=/app"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/glest/glest-source/archive/2.0.zip",
-                    "sha256": "3e7207836cf72e46a46d5cb5f183fb9746bf6d2f8b8bd0b394a19e94f5c89a4f"
+                    "url": "https://github.com/glest/glest-source/archive/master.zip",
+                    "sha256": "9488f2866b97aa92aa99d95a244a417001ff9554a358b85d7b417b4da3d242b9"
                 }
             ]
         },
@@ -94,7 +96,11 @@
             "name": "glest-data",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons/hicolor/48x48/apps"
+                "-DCMAKE_INSTALL_PREFIX=/app/",
+                "-DINSTALL_DIR_BIN=/app/bin/",
+                "-DINSTALL_DIR_DATA=/app/share/glest/",
+                "-DINSTALL_DIR_DESKTOP=/app/share/applications/",
+                "-DINSTALL_DIR_ICON=/app/share/icons/hicolor/48x48/apps"
             ],
             "cleanup": [
                 "/share/appdata/glest_editor.appdata.xml",
@@ -105,8 +111,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/glest/glest-data/archive/master.zip",
-                    "sha256": "958d2e388808c967901003cb741bbda4756933662adf89480cb75c141d0d7b87"
+                    "url": "https://github.com/glest/glest-data/archive/2.0.tar.gz",
+                    "sha256": "f76ae09cdd3954853874e1341fa1d7a75adb225451828939fb84f7e27d380e34"
                 }
             ]
         }
