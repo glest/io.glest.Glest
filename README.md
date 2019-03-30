@@ -14,3 +14,11 @@ Flatpak project: https://github.com/flatpak
 4. Run Glest from your menu, or in the terminal run `flatpak run io.glest.Glest`
 
 Note: amd64/x86_64 linux required.
+
+## Build Glest Using Flatpak
+
+1. Install Flatpak for your linux distribution: https://flatpak.org/setup/
+2. Clone this git repo.
+3. inside the repo, run this command `flatpak-builder --repo=Glest --force-clean Glest-build io.glest.Glest.json`. This will build the repo and save it into the folder `Glest`.
+4. Build the Glest package by running `flatpak build-bundle Glest Glest.flatpak io.glest.Glest`. This will create the package Glest.flatpak.
+5. Install Glest using the instructions above.

@@ -86,9 +86,8 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/glest/glest-source/archive/master.zip",
-                    "sha256": "379604e792fc9737bed5e808764bafcfe5e4678210a08a24d1594d9b14be6513"
+                    "type": "git",
+                    "url": "https://github.com/glest/glest-source.git"
                 }
             ]
         },
@@ -109,9 +108,8 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/glest/glest-data/archive/master.zip",
-                    "sha256": "908a5042cb6d69a4809e31d6c156a9cd1fefc47cf257c146255d746fb5d2229d"
+                    "type": "git",
+                    "url": "https://github.com/glest/glest-data.git"
                 }
             ]
         }
