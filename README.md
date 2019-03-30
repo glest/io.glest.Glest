@@ -8,9 +8,9 @@ Flatpak project: https://github.com/flatpak
 
 ## Install Glest Using Flatpak
 
-1. Install Flatpak for your linux distribution: https://flatpak.org/setup/
-2. Download *Glest.flatpak* from: <need link> or `wget <need link>`
-3. Install by double-clicking on *Glest.flatpak* to install using your graphical package manager, or run `flatpak install Glest.flatpak` in the terminal.
+1. Install Flatpak for your linux distribution: https://flatpak.org/setup/ (with flathub).
+2. Download **Glest.flatpak** from: <need link> or `wget <need link>`
+3. Install by double-clicking on **Glest.flatpak** to install using your graphical package manager, or run `flatpak install Glest.flatpak` in the terminal.
 4. Run Glest from your menu, or in the terminal run `flatpak run io.glest.Glest`
 
 Note: amd64/x86_64 linux required.
@@ -18,7 +18,8 @@ Note: amd64/x86_64 linux required.
 ## Build Glest Using Flatpak
 
 1. Install Flatpak for your linux distribution: https://flatpak.org/setup/
-2. Clone this git repo.
-3. inside the repo, run this command `flatpak-builder --repo=Glest --force-clean Glest-build io.glest.Glest.json`. This will build the repo and save it into the folder `Glest`.
-4. Build the Glest package by running `flatpak build-bundle Glest Glest.flatpak io.glest.Glest`. This will create the package Glest.flatpak.
-5. Install Glest using the instructions above.
+2. Install the freedesktop tools: `flatpak install flathub org.freedesktop.Platform//18.08 org.freedesktop.Sdk//18.08`.
+3. Clone this git repo: `git clone --recursive https://github.com/glest/io.glest.Glest.git`. It is important to use the `--recursive` flag when cloning.
+4. inside the repo, run this command `flatpak-builder --repo=Glest --force-clean Glest-build io.glest.Glest.json`. This will build the repo and save it into the folder `Glest`.
+5. Build the Glest package by running `flatpak build-bundle Glest Glest.flatpak io.glest.Glest`. This will create the package Glest.flatpak.
+6. Install Glest using the instructions above.
