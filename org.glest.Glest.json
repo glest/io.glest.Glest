@@ -81,14 +81,14 @@
             "config-opts": [
                 "-DBUILD_MAP_EDITOR=OFF",
                 "-DBUILD_MODEL_VIEWER=OFF",
-                "-DINSTALL_DIR_BIN=/app/bin/",
-                "-DCMAKE_INSTALL_PREFIX=/app"
+                "-DFLATPAK_INSTALL=ON",
+                "-DINSTALL_DIR_BIN=/app/bin/"
             ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://github.com/glest/glest-source/archive/master.zip",
-                    "sha256": "9488f2866b97aa92aa99d95a244a417001ff9554a358b85d7b417b4da3d242b9"
+                    "sha256": "379604e792fc9737bed5e808764bafcfe5e4678210a08a24d1594d9b14be6513"
                 }
             ]
         },
@@ -96,11 +96,10 @@
             "name": "glest-data",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DCMAKE_INSTALL_PREFIX=/app/",
                 "-DINSTALL_DIR_BIN=/app/bin/",
                 "-DINSTALL_DIR_DATA=/app/share/glest/",
                 "-DINSTALL_DIR_DESKTOP=/app/share/applications/",
-                "-DINSTALL_DIR_ICON=/app/share/icons/hicolor/48x48/apps"
+                "-DINSTALL_DIR_ICON=/app/share/icons/hicolor/256x256/apps"
             ],
             "cleanup": [
                 "/share/appdata/glest_editor.appdata.xml",
@@ -111,8 +110,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/glest/glest-data/archive/2.0.tar.gz",
-                    "sha256": "f76ae09cdd3954853874e1341fa1d7a75adb225451828939fb84f7e27d380e34"
+                    "url": "https://github.com/glest/glest-data/archive/master.zip",
+                    "sha256": "908a5042cb6d69a4809e31d6c156a9cd1fefc47cf257c146255d746fb5d2229d"
                 }
             ]
         }
