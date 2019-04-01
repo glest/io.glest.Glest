@@ -1,4 +1,4 @@
-Glest Flatpak Repo Creator.
+Glest Flatpak Repo Creator
 =================================
 
 Generate all the files to create a Flatpak release of Glest.
