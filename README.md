@@ -13,7 +13,9 @@ Flatpak project: https://github.com/flatpak
 3. Install by double-clicking on **Glest.flatpak** to install using your graphical package manager, or run `flatpak install Glest.flatpak` in the terminal.
 4. Run Glest from your menu, or in the terminal run `flatpak run io.glest.Glest`
 
-Note: amd64/x86_64 linux required.
+Notes:
+* amd64/x86_64 linux required.
+* Glest userdata is stored in `$HOME/.var/app/io.glest.Glest/.glest`.
 
 ## Build Glest Using Flatpak
 
