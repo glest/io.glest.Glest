@@ -81,8 +81,7 @@
             "config-opts": [
                 "-DBUILD_MAP_EDITOR=OFF",
                 "-DBUILD_MODEL_VIEWER=OFF",
-                "-DFLATPAK_INSTALL=ON",
-                "-DINSTALL_DIR_BIN=/app/bin/"
+                "-DCMAKE_INSTALL_PREFIX=/app/"
             ],
             "sources": [
                 {
@@ -95,10 +94,7 @@
             "name": "glest-data",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DINSTALL_DIR_BIN=/app/bin/",
-                "-DINSTALL_DIR_DATA=/app/share/glest/",
-                "-DINSTALL_DIR_DESKTOP=/app/share/applications/",
-                "-DINSTALL_DIR_ICON=/app/share/icons/hicolor/256x256/apps"
+                "-DCMAKE_INSTALL_PREFIX=/app/"
             ],
             "cleanup": [
                 "/share/appdata/glest_editor.appdata.xml",
