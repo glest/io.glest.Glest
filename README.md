@@ -4,6 +4,7 @@ Glest Flatpak Repo Creator
 Generate all the files to create a Flatpak release of Glest.
 
 More about flatpak: https://flatpak.org/
+
 Flatpak project: https://github.com/flatpak
 
 ## Install Glest Using Flatpak
