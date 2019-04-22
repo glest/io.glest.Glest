@@ -97,9 +97,9 @@
                 "-DCMAKE_INSTALL_PREFIX=/app/"
             ],
             "cleanup": [
-                "/share/appdata/glest_editor.appdata.xml",
-                "/share/applications/glest_editor.desktop",
-                "/share/applications/glest_g3dviewer.desktop",
+                "/share/appdata/io.glest.Editor.appdata.xml",
+                "/share/applications/io.glest.Editor.desktop",
+                "/share/applications/io.glest.G3dviewer.desktop",
                 "/share/menu"
             ],
             "sources": [
