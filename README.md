@@ -10,7 +10,7 @@ Flatpak project: https://github.com/flatpak
 ## Install Glest Using Flatpak
 
 1. Install Flatpak for your linux distribution: https://flatpak.org/setup/ (with flathub).
-2. Download **Glest.flatpak** from https://drive.google.com/file/d/1cJ1sqFeZqyWHSXkmZrjXYMvn4rFYX9Hj/view?usp=sharing
+2. Download **Glest.flatpak** from https://github.com/glest/io.glest.Glest/releases
 3. Install by double-clicking on **Glest.flatpak** to install using your graphical package manager, or run `flatpak install Glest.flatpak` in the terminal.
 4. Run Glest from your menu, or in the terminal run `flatpak run io.glest.Glest`
 
