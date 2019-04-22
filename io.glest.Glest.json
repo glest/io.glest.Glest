@@ -3,8 +3,6 @@
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
-    "rename-appdata-file": "glest.appdata.xml",
-    "rename-desktop-file": "glest.desktop",
     "rename-icon": "glest",
     "command": "glest",
     "finish-args": [
